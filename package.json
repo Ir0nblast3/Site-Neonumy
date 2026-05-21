@@ -1,0 +1,25 @@
+{
+  "name": "site-neonumy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ir0nblast3/Site-Neonumy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ir0nblast3/Site-Neonumy/issues"
+  },
+  "homepage": "https://github.com/Ir0nblast3/Site-Neonumy#readme",
+  "devDependencies": {
+    "vite": "^8.0.14"
+  }
+}
