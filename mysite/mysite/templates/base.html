@@ -1,4 +1,5 @@
 {% load static wagtailcore_tags wagtailuserbar %}
+{% load django_vite %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,16 +25,23 @@
         {% endif %}
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
 
         {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+        {% vite_hmr_client %}
+
+        {% vite_asset "mysite/mysite/static/js/mysite.js" %}
+
+        <link rel="stylesheet" href="{% static 'mysite.css' %}">
+
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
-
+        {% include "topbar.html" %}
+    
         {% block content %}{% endblock %}
 
         {# Global javascript #}
