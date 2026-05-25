@@ -3,3 +3,8 @@ $custom-colors: (
 );
 
 $body-tertiary-bg: rgb(255, 247, 0);
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
