@@ -5,6 +5,19 @@
     align-items: end;
 }
 
-.container-fluid{
-    max-width: 1320px;
+.navbar{
+    padding-bottom: 0;
+}
+
+.navbar-brand{
+    align-items: end;
+    padding-bottom: 0;
+}
+
+.navbar{
+    padding-top: 18px;
+}
+
+.nav-link.active{
+    text-decoration: underline;
 }
