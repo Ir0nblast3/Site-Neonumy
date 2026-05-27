@@ -5,25 +5,25 @@
         <div class="row">
 
           <div class="col-md-7 text-start">
-            <h2>Contact Us</h2>
+            <h2 class="contact-title">Contact Us</h2>
             
             <div class="d-flex gap-4 mt-5">
                 <div>
-                   <p><strong>Address</strong></p>
-                   <p>Avenida 5 de Outubro 46A, 8000-076 Faro</p>
+                    <p class="mb-0"><strong>Address</strong></p>
+                    <p class="mb-0">Avenida 5 de Outubro 46A, 8000-076 Faro</p>
                 </div>
 
                 <div>
-                    <p><strong>Email</strong></p>
-                    <p>contact@neonumy.com</p>
+                    <p class="mb-0"><strong>Email</strong></p>
+                    <p class="mb-0">contact@neonumy.com</p>
                 </div>
             </div>
             
           </div>
           <div class="col-md-5">
-            <h2>Our Socials</h2>
+            <h2 class="socials-title">Our Socials</h2>
 
-            <div class="d-flex gap-3 mt-5">
+            <div class="d-flex gap-3 mt-5 flex-row socials-icons">
                {% if settings.base.FooterSettings.facebook_url %}
                <a href="{{ settings.base.FooterSettings.facebook_url }}" target="_blank">
                    {% if settings.base.FooterSettings.facebook_icon %}
@@ -31,9 +31,41 @@
                    {% endif %}
                </a>
                {% endif %}
+
+               {% if settings.base.FooterSettings.instagram_url %}
+               <a href="{{ settings.base.FooterSettings.instagram_url }}" target="_blank">
+                   {% if settings.base.FooterSettings.instagram_icon %}
+                       {% image settings.base.FooterSettings.instagram_icon original %}
+                   {% endif %}
+               </a>
+               {% endif %}
+
+               {% if settings.base.FooterSettings.linkedin_url %}
+               <a href="{{ settings.base.FooterSettings.linkedin_url }}" target="_blank">
+                   {% if settings.base.FooterSettings.linkedin_icon %}
+                       {% image settings.base.FooterSettings.linkedin_icon original %}
+                   {% endif %}
+               </a>
+               {% endif %}
+
+               {% if settings.base.FooterSettings.whatsapp_url %}
+               <a href="{{ settings.base.FooterSettings.whatsapp_url }}" target="_blank">
+                   {% if settings.base.FooterSettings.whatsapp_icon %}
+                       {% image settings.base.FooterSettings.whatsapp_icon original %}
+                   {% endif %}
+               </a>
+               {% endif %}
+
             </div>
           </div>
 
         </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+                <p class="mb-0">All Rights Reserved</p>
+            </div>
+        </div>
+
     </div>
 </footer>

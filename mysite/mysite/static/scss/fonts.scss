@@ -4,3 +4,15 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Chillax-Semibold';
+  src: url('/assets/fonts/Chillax-Semibold.woff2') format('woff2'),
+       url('/assets/fonts/Chillax-Semibold.woff') format('woff'),
+       url('/assets/fonts/Chillax-Semibold.ttf') format('truetype'),
+       url('/assets/fonts/Chillax-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+

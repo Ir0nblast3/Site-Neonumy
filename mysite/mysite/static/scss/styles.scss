@@ -54,3 +54,4 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrap/scss/utilities/api";
 
 @import "./topbar";
+@import "./footer.scss";
