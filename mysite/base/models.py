@@ -22,6 +22,8 @@ class NavigationSettings(BaseGenericSetting):
 @register_setting
 class FooterSettings(BaseGenericSetting):
     
+    # adress = models.CharField("Address",max_length=255,blank=True)
+
     finaciamento_icon=models.ForeignKey(
         "wagtailimages.Image",
         null=True,

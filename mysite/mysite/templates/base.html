@@ -31,11 +31,6 @@
         {% endblock %}
 
         {% vite_hmr_client %}
-
-        {% vite_asset "mysite/mysite/static/js/mysite.js" %}
-
-       
-
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -46,8 +41,7 @@
 
         {% include "footer.html" %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script>
+        {% vite_asset "mysite/mysite/assets/js/mysite.js" %}
 
         {% block extra_js %}
         {# Override this in templates to add extra javascript #}

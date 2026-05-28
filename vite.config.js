@@ -5,11 +5,12 @@ export default defineConfig({
     base: "/static/",
     build:{
         manifest:"manifest.json",
-        outDir: resolve("./assets"),
-        assetsDir: "django-assets",
+        emptyOutDir: true,
+        outDir: resolve("./mysite/mysite/static"),
+        assetsDir: "",
         rollupOptions: {
             input:{
-                main: resolve("./mysite/mysite/static/js/mysite.js")
+                main: resolve("./mysite/mysite/assets/js/mysite.js")
             }
         }
     },

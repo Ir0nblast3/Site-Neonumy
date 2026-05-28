@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from pathlib import Path
@@ -137,7 +138,8 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = [
-    BASE_DIR / "assets",
+    PROJECT_DIR / "static",
+    (os.path.join("mysite", "mysite", "assets"), PROJECT_DIR / "assets"),
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
