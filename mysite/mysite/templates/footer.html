@@ -1,26 +1,29 @@
 {% load wagtailimages_tags %}
 
 <footer class="bg-dark text-white py-4 mt-5">
-    <div class="container-xxl text-center">
-        <div class="row">
+    <div class="container-xxl text-center mt-5">
+        <div class="row justify-content-between">
 
-          <div class="col-md-7 text-start">
+          <div class="col-md-7 text-start border-end">
             <h2 class="contact-title">Contact Us</h2>
             
             <div class="d-flex gap-4 mt-5">
+
                 <div>
-                    <p class="mb-0"><strong>Address</strong></p>
-                    <p class="mb-0">Avenida 5 de Outubro 46A, 8000-076 Faro</p>
+                    <p class="mb-0 contacto-tittle"><strong>Address</strong></p>
+                    <p class="mb-0 contacto-text">Avenida 5 de Outubro 46A, 8000-076 Faro</p>
                 </div>
 
                 <div>
-                    <p class="mb-0"><strong>Email</strong></p>
-                    <p class="mb-0">contact@neonumy.com</p>
+                    <p class="mb-0 contacto-tittle"><strong>Email</strong></p>
+                    <p class="mb-0 contacto-text">contact@neonumy.com</p>
                 </div>
+
             </div>
-            
+
           </div>
-          <div class="col-md-5">
+
+          <div class="col-md-4 text-start">
             <h2 class="socials-title">Our Socials</h2>
 
             <div class="d-flex gap-3 mt-5 flex-row socials-icons">
@@ -61,10 +64,25 @@
 
         </div>
 
-        <div class="row">
-            <div class="col d-flex justify-content-center align-items-center">
-                <p class="mb-0">All Rights Reserved</p>
+        <div class="divider-horizontal"></div>
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4 text-start copyright-text">
+                <p class="mb-0">Copyright © 2025. All rights reserved by Neonumy</p>
             </div>
+
+            <div class="col-md-8 d-flex justify-content-between align-items-center">
+
+                <a class="nav-link footer-links {% if request.path == '/home/' %}active{% endif %}" href="#">HOME</a>
+                <a class="nav-link footer-links {% if request.path == '/privacy_policy/' %}active{% endif %}" href="#">PRIVACY POLICY</a>
+
+                {% if settings.base.FooterSettings.finaciamento_icon %}
+                    {% image settings.base.FooterSettings.finaciamento_icon width-430 %}
+                {% endif %}
+
+            </div>
+
         </div>
 
     </div>

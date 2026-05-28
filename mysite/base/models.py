@@ -22,6 +22,14 @@ class NavigationSettings(BaseGenericSetting):
 @register_setting
 class FooterSettings(BaseGenericSetting):
     
+    finaciamento_icon=models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
+   
     facebook_url = models.URLField(verbose_name="Facebook URL", blank=True)
     facebook_icon= models.ForeignKey(
         "wagtailimages.Image",
@@ -69,6 +77,7 @@ class FooterSettings(BaseGenericSetting):
                 FieldPanel("linkedin_icon"),
                 FieldPanel("whatsapp_url"),
                 FieldPanel("whatsapp_icon"),
+                FieldPanel("finaciamento_icon")
             ],
             "Social settings",
         )
