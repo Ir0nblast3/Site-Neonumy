@@ -10,13 +10,13 @@
             <div class="d-flex gap-4 mt-5">
 
                 <div>
-                    <p class="mb-0 contacto-tittle"><strong>Address</strong></p>
-                    <p class="mb-0 contacto-text">Avenida 5 de Outubro 46A, 8000-076 Faro</p>
+                    <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Address</strong></p>
+                    <p class="mb-0 contacto-text">{{ settings.base.FooterSettings.address }}</p>
                 </div>
 
                 <div>
-                    <p class="mb-0 contacto-tittle"><strong>Email</strong></p>
-                    <p class="mb-0 contacto-text">contact@neonumy.com</p>
+                    <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Email</strong></p>
+                    <p class="mb-0 contacto-text">{{ settings.base.FooterSettings.email }}</p>
                 </div>
 
             </div>
@@ -26,7 +26,7 @@
           <div class="col-md-4 text-start">
             <h2 class="socials-title">Our Socials</h2>
 
-            <div class="d-flex gap-3 mt-5 flex-row socials-icons">
+            <div class="d-flex gap-3 flex-row socials-icons icons-mt">
                {% if settings.base.FooterSettings.facebook_url %}
                <a href="{{ settings.base.FooterSettings.facebook_url }}" target="_blank">
                    {% if settings.base.FooterSettings.facebook_icon %}

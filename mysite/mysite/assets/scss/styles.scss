@@ -56,3 +56,4 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "./topbar";
 @import "./footer.scss";
+@import "./hero.scss";

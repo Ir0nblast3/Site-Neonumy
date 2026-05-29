@@ -1,0 +1,27 @@
+{% load wagtailimages_tags %}
+
+<section class="bg-dark text-white py-5">
+    <div class="container-xxl text-center mt-5 mb-5">
+
+        <div class="row align-items-top">
+
+            <div class="col-md-6 text-start mt-5 mb-4">
+                <h2 class="hero-title mb-4">What if digitalization was your firm's first ally?</h2>
+
+                <div class="hero-text mb-5">Development of web solutions for accountants and their companies, through the NewRai brand.</div>
+
+                {% if page.newrai_image %}
+                    {% image page.newrai_image original class="newrai-img" %}
+                {% endif %}
+            </div>
+
+            <div class="col-md-6 mt-5 mb-4">
+                {% if page.hero_image %}
+                    {% image page.hero_image original class="img-fluid" %}
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+</section>

@@ -22,7 +22,8 @@ class NavigationSettings(BaseGenericSetting):
 @register_setting
 class FooterSettings(BaseGenericSetting):
     
-    # adress = models.CharField("Address",max_length=255,blank=True)
+    address = models.CharField("Address",max_length=255,blank=True)
+    email = models.CharField("Email", max_length=255, blank=True)
 
     finaciamento_icon=models.ForeignKey(
         "wagtailimages.Image",
@@ -79,7 +80,9 @@ class FooterSettings(BaseGenericSetting):
                 FieldPanel("linkedin_icon"),
                 FieldPanel("whatsapp_url"),
                 FieldPanel("whatsapp_icon"),
-                FieldPanel("finaciamento_icon")
+                FieldPanel("finaciamento_icon"),
+                FieldPanel("address"),
+                FieldPanel("email")
             ],
             "Social settings",
         )
