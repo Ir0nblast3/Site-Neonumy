@@ -3,6 +3,7 @@
     font-family: 'Satoshi-Reg', sans-serif;
     letter-spacing: 2px;
     align-items: end;
+    color: $secondary !important;
 }
 
 .navbar{
@@ -20,5 +21,7 @@
 
 .nav-link.active{
     text-decoration: underline;
+    text-decoration-color: $primary;
+    text-underline-offset: 8px;
 }
 

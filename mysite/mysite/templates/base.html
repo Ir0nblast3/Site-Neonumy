@@ -33,7 +33,9 @@
         {% vite_hmr_client %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="{% block body_class %}{% endblock %}" data-bs-spy="scroll" 
+     data-bs-target="#mainNavbar" data-bs-smooth-scroll="true" tabindex="0">
+     
         {% wagtailuserbar %}
         {% include "topbar.html" %}
     

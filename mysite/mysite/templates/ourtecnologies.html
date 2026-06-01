@@ -1,0 +1,107 @@
+{% load wagtailimages_tags %}
+
+<section class="bg-primary text-white py-5" id="ourtech">
+    <div class="container-xxl text-center mt-5 mb-5">
+        <h2 class="mb-4 tec-title">Our Technologies</h2>
+
+        <div class="row align-items-top">
+
+            <div class="col-md-3 mt-4 ">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-4">
+                        {% if page.django_image %}
+                           {% image page.django_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.django_text }}</div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-4">
+                        {% if page.docker_image %}
+                           {% image page.docker_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.docker_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-3">
+                        {% if page.flutter_image %}
+                           {% image page.flutter_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.flutter_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-4">
+                        {% if page.graphql_image %}
+                           {% image page.graphql_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.graphql_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-4">
+                        {% if page.hashi_image %}
+                           {% image page.hashi_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.hashi_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-3">
+                        {% if page.mongo_image %}
+                           {% image page.mongo_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.mongo_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-4">
+                        {% if page.postgre_image %}
+                           {% image page.postgre_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.postgre_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="border border-3 rounded-5 border-white h-100">
+                    <div class="mt-5 px-4">
+                        {% if page.react_image %}
+                           {% image page.react_image original %}
+                        {% endif %}
+
+                        <div class="txt_django mt-5 mb-5">{{ page.react_text }}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

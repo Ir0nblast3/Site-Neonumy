@@ -1,24 +1,26 @@
 {% load wagtailimages_tags %}
 
-<footer class="bg-dark text-white py-4 mt-5">
+<footer class="bg-dark text-secondary py-4 mt-5" id="contactus">
     <div class="container-xxl text-center mt-5">
         <div class="row justify-content-between">
 
-          <div class="col-md-7 text-start border-end">
-            <h2 class="contact-title">Contact Us</h2>
+          <div class="col-md-7 text-start">
+            <div class="border-end border-secondary border-2">
+                <h2 class="contact-title">Contact Us</h2>
             
-            <div class="d-flex gap-4 mt-5">
+                <div class="d-flex gap-4 mt-5">
 
-                <div>
-                    <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Address</strong></p>
-                    <p class="mb-0 contacto-text">{{ settings.base.FooterSettings.address }}</p>
+                    <div>
+                        <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Address</strong></p>
+                        <p class="mb-0 contacto-text">{{ settings.base.FooterSettings.address }}</p>
+                    </div>
+
+                    <div>
+                       <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Email</strong></p>
+                       <p class="mb-0 contacto-text">{{ settings.base.FooterSettings.email }}</p>
+                    </div>
+
                 </div>
-
-                <div>
-                    <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Email</strong></p>
-                    <p class="mb-0 contacto-text">{{ settings.base.FooterSettings.email }}</p>
-                </div>
-
             </div>
 
           </div>
