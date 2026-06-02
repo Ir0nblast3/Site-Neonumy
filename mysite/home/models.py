@@ -109,7 +109,30 @@ class HomePage(Page):
 
     #ABOUT US
 
-    About_Us_Text_1 = models.CharField(max_length=255, blank=True)
+    About_Us_Text_1 = models.CharField(max_length=255, blank=True)  
+
+    Aboutus_image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    About_Us_Text_2 = models.CharField(max_length=255, blank=True) 
+
+    #OUR TEAM
+
+    Image_1 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_1 = models.CharField(max_length=255, blank=True) 
+    Role_Text_1 = models.CharField(max_length=255, blank=True) 
 
 
     content_panels = Page.content_panels + [
@@ -136,5 +159,11 @@ class HomePage(Page):
     FieldPanel("react_text"),
 
     FieldPanel("About_Us_Text_1"),
+    FieldPanel("Aboutus_image"),
+    FieldPanel("About_Us_Text_2"),
+
+    FieldPanel("Image_1"),
+    FieldPanel("Name_Text_1"),
+    FieldPanel("Role_Text_1"),
 ]
 
