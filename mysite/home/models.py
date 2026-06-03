@@ -132,7 +132,84 @@ class HomePage(Page):
     )
 
     Name_Text_1 = models.CharField(max_length=255, blank=True) 
-    Role_Text_1 = models.CharField(max_length=255, blank=True) 
+    Role_Text_1 = models.CharField(max_length=255, blank=True)
+
+    Image_2 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_2 = models.CharField(max_length=255, blank=True) 
+    Role_Text_2 = models.CharField(max_length=255, blank=True)
+
+    Image_3 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_3 = models.CharField(max_length=255, blank=True) 
+    Role_Text_3 = models.CharField(max_length=255, blank=True)
+
+    Image_4 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_4 = models.CharField(max_length=255, blank=True) 
+    Role_Text_4 = models.CharField(max_length=255, blank=True)
+
+    Image_5 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_5 = models.CharField(max_length=255, blank=True) 
+    Role_Text_5 = models.CharField(max_length=255, blank=True)
+
+    Image_6 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_6 = models.CharField(max_length=255, blank=True) 
+    Role_Text_6 = models.CharField(max_length=255, blank=True)
+
+    Image_7 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_7 = models.CharField(max_length=255, blank=True) 
+    Role_Text_7 = models.CharField(max_length=255, blank=True)
+
+    Image_8 = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+    Name_Text_8 = models.CharField(max_length=255, blank=True) 
+    Role_Text_8 = models.CharField(max_length=255, blank=True)
 
 
     content_panels = Page.content_panels + [
@@ -165,5 +242,26 @@ class HomePage(Page):
     FieldPanel("Image_1"),
     FieldPanel("Name_Text_1"),
     FieldPanel("Role_Text_1"),
+    FieldPanel("Image_2"),
+    FieldPanel("Name_Text_2"),
+    FieldPanel("Role_Text_2"),
+    FieldPanel("Image_3"),
+    FieldPanel("Name_Text_3"),
+    FieldPanel("Role_Text_3"),
+    FieldPanel("Image_4"),
+    FieldPanel("Name_Text_4"),
+    FieldPanel("Role_Text_4"),
+    FieldPanel("Image_5"),
+    FieldPanel("Name_Text_5"),
+    FieldPanel("Role_Text_5"),
+    FieldPanel("Image_6"),
+    FieldPanel("Name_Text_6"),
+    FieldPanel("Role_Text_6"),
+    FieldPanel("Image_7"),
+    FieldPanel("Name_Text_7"),
+    FieldPanel("Role_Text_7"),
+    FieldPanel("Image_8"),
+    FieldPanel("Name_Text_8"),
+    FieldPanel("Role_Text_8"),
 ]
 
