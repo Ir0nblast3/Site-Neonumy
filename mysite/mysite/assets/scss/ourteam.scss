@@ -15,5 +15,9 @@
 }
 
 .img-background{
-    background: $primary;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        $primary 40%
+    );
 }
