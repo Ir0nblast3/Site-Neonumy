@@ -1,6 +1,23 @@
 {% load wagtailimages_tags %}
 
-<section class="bg-white text-secondary py-5" id="aboutus">
+<section class="bg-white text-secondary py-5 aboutus-section" id="aboutus">
+
+    <div class="aboutus-viewport">
+        <div class="aboutus-bg row-top">
+            {% for block in page.aboutus_gallery %}
+                {% image block.value original %}
+            {% endfor %}
+        </div>
+
+        <div class="aboutus-bg row-bot">
+            {% for block in page.aboutus_gallery %}
+                {% image block.value original %}
+            {% endfor %}
+        </div>
+
+    </div>
+    
+
     <div class="container-xxl text-center mt-5 mb-5">
 
         <h2 class="mb-4 aboutus-title">About Us</h2>

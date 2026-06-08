@@ -14,10 +14,19 @@
     margin-top: -8px;
 }
 
-.img-background{
-    background: linear-gradient(
-        to bottom,
-        transparent 40%,
-        $primary 40%
-    );
+.img-background {
+  --cut: 40%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent var(--cut),
+    $primary var(--cut)
+  );
+}
+
+.ourteam-bg{
+    background-image: url('/mysite/mysite/assets/images/textura.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

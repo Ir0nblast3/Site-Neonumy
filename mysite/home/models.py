@@ -1,6 +1,8 @@
 from django.db import models
 from wagtail.admin.panels import FieldPanel
 from wagtail.models import Page
+from wagtail.fields import StreamField
+from wagtail.images.blocks import ImageChooserBlock
 
 
 class HomePage(Page):
@@ -121,6 +123,10 @@ class HomePage(Page):
 
     About_Us_Text_2 = models.CharField(max_length=255, blank=True) 
 
+    aboutus_gallery = StreamField([
+        ('image', ImageChooserBlock()),
+    ], use_json_field=True, blank=True)
+
     #OUR TEAM
 
     Image_1 = models.ForeignKey(
@@ -238,6 +244,7 @@ class HomePage(Page):
     FieldPanel("About_Us_Text_1"),
     FieldPanel("Aboutus_image"),
     FieldPanel("About_Us_Text_2"),
+    FieldPanel("aboutus_gallery"),
 
     FieldPanel("Image_1"),
     FieldPanel("Name_Text_1"),

@@ -13,3 +13,45 @@
     margin-top: 110px;
     margin-bottom: 110px ;
 }
+
+.aboutus-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutus-viewport {
+    position: absolute;
+    inset: 0;
+
+    width: 1294px;
+    max-width: 100%;
+
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.aboutus-bg {
+    position: absolute;
+
+    display: flex;
+    gap: clamp(20px, 4vw, 65px);
+
+    width: max-content;
+}
+
+.row-top{
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.row-bot{
+    top: 55%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.aboutus-section .container-xxl {
+    position: relative;
+    z-index: 2;
+}
