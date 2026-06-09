@@ -88,6 +88,25 @@ document.querySelectorAll(".img-background").forEach((el) => {
 
 });
 
+document.querySelectorAll('.person-img').forEach(card => {
+
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.05,
+            duration: 0.5,
+            ease: "power2.out"
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            duration: 0.5,
+            ease: "power2.out"
+        });
+    });
+
+});
 
 
 

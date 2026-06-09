@@ -193,6 +193,7 @@ WAGTAILDOCS_MAX_UPLOAD_SIZE = 10 * 1024 * 1024  # 10MB
 
 DJANGO_VITE = {
   "default": {
-    "dev_mode": True
+    "dev_mode": True,
+    # "dev_server_host": "192.168.1.83"
   }
 }
