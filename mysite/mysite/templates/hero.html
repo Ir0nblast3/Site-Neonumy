@@ -4,16 +4,14 @@
     <div class="container-xxl text-center mt-5 mb-5">
 
         <div class="row align-items-top">
-
+            
             <div class="col-md-6 text-start mt-5 mb-4">
                 <h2 class="hero-title mb-4">{{ page.hero_title }}</h2>
-
                 <div class="hero-text mb-5">{{ page.hero_subtitle }}</div>
 
-                {% if page.newrai_image %}
-                   {% image page.newrai_image original class="newrai-img img-fluid" %}
-                {% endif %}
-
+                    {% if page.newrai_image %}
+                        {% image page.newrai_image original class="newrai-img img-fluid" %}
+                    {% endif %}
             </div>
 
             <div class="col-md-6 mt-5 mb-4">

@@ -109,6 +109,18 @@ document.querySelectorAll('.person-img').forEach(card => {
 });
 
 
+gsap.registerPlugin(ScrollTrigger);
 
-
-
+gsap.from(".tech-card", {
+    y: 80,
+    opacity: 0,
+    rotateX: -15,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power4.out",
+    scrollTrigger: {
+        trigger: "#ourtech",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse"
+    }
+});

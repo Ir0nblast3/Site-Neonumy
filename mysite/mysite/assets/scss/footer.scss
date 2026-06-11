@@ -22,6 +22,20 @@
 .contacto-text{
     font-family: 'Satoshi-Reg', sans-serif;
     font-size: 22px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: #9FBDC7;
+    color: $secondary;
+}
+
+.contacto-text:hover{
+    color: #9FBDC7;
+}
+
+
+.address-text{
+    font-family: 'Satoshi-Reg', sans-serif;
+    font-size: 22px;
 }
 
 .contacto-tittle{

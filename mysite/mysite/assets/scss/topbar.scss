@@ -7,16 +7,14 @@
 }
 
 .navbar{
-    padding-bottom: 0;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
 .navbar-brand{
     align-items: end;
     padding-bottom: 0;
-}
-
-.navbar{
-    padding-top: 18px;
 }
 
 .nav-link.active{
