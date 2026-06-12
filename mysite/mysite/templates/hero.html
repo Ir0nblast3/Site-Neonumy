@@ -5,19 +5,25 @@
 
         <div class="row align-items-top">
             
-            <div class="col-md-6 text-start mt-5 mb-4">
+            <div class="col-md-6 text-start mt-5 mb-4 onder-1">
                 <h2 class="hero-title mb-4">{{ page.hero_title }}</h2>
                 <div class="hero-text mb-5">{{ page.hero_subtitle }}</div>
 
+                <div class="d-none d-md-block">
                     {% if page.newrai_image %}
                         {% image page.newrai_image original class="newrai-img img-fluid" %}
                     {% endif %}
+                </div>
             </div>
 
-            <div class="col-md-6 mt-5 mb-4">
+            <div class="col-md-6 mt-md-5 mb-md-4">
                 {% if page.hero_image %}
                     {% image page.hero_image original class="img-fluid" %}
                 {% endif %}
+            </div>
+
+            <div class="col-12 d-block d-md-none">
+                {% image page.newrai_image original class="newrai-img img-fluid" %}
             </div>
 
         </div>

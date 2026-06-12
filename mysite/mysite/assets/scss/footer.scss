@@ -51,6 +51,14 @@
   margin-bottom: 50px;
 }
 
+
+@media (min-width: 768px) {
+    .divider-vertical {
+        border-right: 2px solid var(--bs-secondary);
+    }
+}
+
+
 .icons-mt{
     margin-top: 60px;
 }
