@@ -24,7 +24,7 @@ if (rowTop) {
         onUpdate: self => {
 
             const offset =
-                (self.progress * width * 1) % width;
+                (self.progress * width * 0.6) % width;
 
             gsap.set(rowTop, {
                 x: -offset
@@ -49,7 +49,7 @@ if (rowBot) {
         onUpdate: self => {
 
             const offset =
-                (self.progress * width * 1) % width;
+                (self.progress * width * 0.6) % width;
 
             gsap.set(rowBot, {
                 x: offset
@@ -65,10 +65,8 @@ document.querySelectorAll(".img-background").forEach((el) => {
   let tween;
 
   el.addEventListener("mouseenter", () => {
-    // reset instantâneo
     gsap.set(el, { "--cut": "100%" });
 
-    // anima de volta para 40%
     tween = gsap.to(el, {
       "--cut": "40%",
       duration: 0.6,
@@ -121,6 +119,6 @@ gsap.from(".tech-card", {
     scrollTrigger: {
         trigger: "#ourtech",
         start: "top 80%",
-        toggleActions: "play reverse play reverse"
+        toggleActions: "restart none none none"
     }
 });

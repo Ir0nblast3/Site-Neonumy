@@ -26,8 +26,24 @@
 }
 
 .ourteam-bg{
+    position: relative;
     background-image: url('/mysite/mysite/assets/images/textura.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    isolation: isolate;
+}
+
+.ourteam-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($secondary, 0.9);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ourteam-bg > * {
+    position: relative;
+    z-index: 1;
 }
