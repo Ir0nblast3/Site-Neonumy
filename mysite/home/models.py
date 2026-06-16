@@ -5,6 +5,16 @@ from wagtail.fields import StreamField
 from wagtail.images.blocks import ImageChooserBlock
 
 
+class PrivacyPolicyPage(Page):
+
+    Title = models.TextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("title"),
+    ]
+
+
+
 class HomePage(Page):
     #HERO
 
