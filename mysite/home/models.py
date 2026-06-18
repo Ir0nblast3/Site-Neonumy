@@ -7,10 +7,32 @@ from wagtail.images.blocks import ImageChooserBlock
 
 class PrivacyPolicyPage(Page):
 
-    Title = models.TextField(blank=True)
+    last_update = models.CharField(max_length=100, blank=True)
+    text_1 = models.TextField(blank=True)
+
+    subtitle_1 = models.CharField(max_length=255, blank=True)
+    subtext_1 = models.TextField(blank=True)
+
+    subtitle_2 = models.CharField(max_length=255, blank=True)
+    subtext_2 = models.TextField(blank=True)
+
+    subtitle_3 = models.CharField(max_length=255, blank=True)
+    subtext_3 = models.TextField(blank=True)
+    
+    subtitle_4 = models.CharField(max_length=255, blank=True)
+    subtext_4 = models.TextField(blank=True)
 
     content_panels = Page.content_panels + [
-        FieldPanel("title"),
+        FieldPanel("last_update"),
+        FieldPanel("text_1"),
+        FieldPanel("subtitle_1"),
+        FieldPanel("subtext_1"),
+        FieldPanel("subtitle_2"),
+        FieldPanel("subtext_2"),
+        FieldPanel("subtitle_3"),
+        FieldPanel("subtext_3"),
+        FieldPanel("subtitle_4"),
+        FieldPanel("subtext_4"),
     ]
 
 

@@ -51,6 +51,12 @@
   margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .divider-horizontal {
+    margin-top: 60px;
+  }
+}
+
 
 @media (min-width: 768px) {
     .divider-vertical {

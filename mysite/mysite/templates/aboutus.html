@@ -2,7 +2,7 @@
 
 <section class="bg-white text-secondary py-5 aboutus-section" id="aboutus">
 
-    <div class="aboutus-viewport">
+    <div class="aboutus-viewport d-none d-md-block">
         <div class="aboutus-bg row-top">
             {% for block in page.aboutus_gallery %}
                 {% image block.value original class="img-fluid" %}
