@@ -6,133 +6,32 @@
 
         <div class="row align-items-top mt-5 mb-5">
 
-            <div class="col-md-6 col-lg-3 mt-5 ">
+            {% for member in page.teammembers.all %}
+
+            <div class="col-md-6 col-lg-3 mt-5">
+
                 <div class="img-background">
                     <div class="person-img">
-                        {% if page.Image_1 %}
-                            {% image page.Image_1 original class="img-fluid" %}
+
+                        {% if member.image %}
+                            {% image member.image original class="img-fluid" %}
                         {% endif %}
                     </div>
                 </div>
 
                 <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_1 }}</div>
-                    <div class="person_role">{{ page.Role_Text_1 }}</div>
-                </div>
+                    <div class="person_name">
+                        {{ member.name }}
+                    </div>
 
-            </div>
-
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_2 %}
-                            {% image page.Image_2 original class="img-fluid" %}
-                        {% endif %}
+                    <div class="person_role">
+                        {{ member.role }}
                     </div>
                 </div>
 
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_2 }}</div>
-                    <div class="person_role">{{ page.Role_Text_2 }}</div>
-                </div>
-
             </div>
 
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_3 %}
-                            {% image page.Image_3 original class="img-fluid" %}
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_3 }}</div>
-                    <div class="person_role">{{ page.Role_Text_3 }}</div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_4 %}
-                            {% image page.Image_4 original class="img-fluid" %}
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_4 }}</div>
-                    <div class="person_role">{{ page.Role_Text_4 }}</div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_5 %}
-                            {% image page.Image_5 original class="img-fluid" %}
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_5 }}</div>
-                    <div class="person_role">{{ page.Role_Text_5 }}</div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_6 %}
-                            {% image page.Image_6 original class="img-fluid" %}
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_6 }}</div>
-                    <div class="person_role">{{ page.Role_Text_6 }}</div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_7 %}
-                            {% image page.Image_7 original class="img-fluid" %}
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_7 }}</div>
-                    <div class="person_role">{{ page.Role_Text_7 }}</div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3 mt-5 ">
-                <div class="img-background">
-                    <div class="person-img">
-                        {% if page.Image_8 %}
-                            {% image page.Image_8 original class="img-fluid" %}
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="person_name">{{ page.Name_Text_8 }}</div>
-                    <div class="person_role">{{ page.Role_Text_8 }}</div>
-                </div>
-
-            </div>
+            {% endfor %}
 
         </div>
     </div>
