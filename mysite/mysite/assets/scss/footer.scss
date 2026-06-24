@@ -1,26 +1,26 @@
 .socials-title{
-    font-family: 'Chillax-Semibold', sans-serif;
-    font-size: 52px;
+    font-family: $headings-font-family;
+    font-size: $h2-font-size;
 }
 
 .contact-title{
-    font-family: 'Chillax-Semibold', sans-serif;
-    font-size: 52px;
+    font-family: $headings-font-family;
+    font-size: $h2-font-size;
 }
 
 .copyright-text{
     font-size: 14px;
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
 }
 
 .footer-links{
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     font-size: 14px;
     letter-spacing: 2px;
 }
 
 .contacto-text{
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     font-size: 22px;
     text-decoration: underline;
     text-underline-offset: 8px;
@@ -34,12 +34,12 @@
 
 
 .address-text{
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     font-size: 22px;
 }
 
 .contacto-tittle{
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     font-size: 22px;
 }
 

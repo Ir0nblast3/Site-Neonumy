@@ -1,6 +1,6 @@
 .team-title{
-    font-family: 'Chillax-Semibold', sans-serif;
-    font-size: 52px;
+    font-family: $headings-font-family;
+    font-size: $h2-font-size;
 }
 
 .person_name{
@@ -10,7 +10,7 @@
 
 .person_role{
     font-size: 22px;
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     margin-top: -8px;
 }
 
@@ -43,7 +43,7 @@
     pointer-events: none;
 }
 
-.ourteam-bg > * {
+.ourteam-bg > .container-xxl {
     position: relative;
     z-index: 1;
 }

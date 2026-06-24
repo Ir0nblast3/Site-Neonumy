@@ -1,10 +1,10 @@
 .tec-title{
-    font-family: 'Chillax-Semibold', sans-serif;
-    font-size: 52px;
+    font-family: $headings-font-family;
+    font-size: $h2-font-size;
 }
 
 .txt_django{
     font-size: 22px;
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     line-height: 1.2;
 }

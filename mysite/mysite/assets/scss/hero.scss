@@ -1,11 +1,11 @@
 .hero-title{
-    font-family: 'Chillax-Semibold', sans-serif;
+    font-family: $headings-font-family;
     font-size: 50px;
 }
 
 .hero-text{
     font-size: 36px;
-    font-family: 'Satoshi-Reg', sans-serif;
+    font-family: $font-family-base;
     line-height: 1.2;
 }
 
