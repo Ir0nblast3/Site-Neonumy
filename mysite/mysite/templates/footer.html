@@ -4,11 +4,11 @@
     <div class="container-xxl text-center mt-5">
         <div class="row justify-content-between">
 
-          <div class="col-md-7 text-start">
+          <div class="col-lg-7 text-start">
             <div class="divider-vertical pe-md-5">
                 <h2 class="contact-title">Contact Us</h2>
             
-                <div class="d-flex flex-column flex-md-row gap-4 mt-5">
+                <div class="d-flex flex-column flex-md-row gap-4 mt-lg-5 mt-2">
 
                     <div>
                         <p class="mb-0 contacto-tittle mt-2" style="line-height:1;"><strong>Address</strong></p>
@@ -25,42 +25,15 @@
 
           </div>
 
-          <div class="col-md-4 text-start mt-5 mt-md-0">
+          <div class="col-lg-4 text-start mt-5 mt-lg-0">
             <h2 class="socials-title">Our Socials</h2>
 
             <div class="d-flex gap-3 flex-row socials-icons icons-mt">
-               {% if settings.base.FooterSettings.facebook_url %}
-               <a href="{{ settings.base.FooterSettings.facebook_url }}" target="_blank">
-                   {% if settings.base.FooterSettings.facebook_icon %}
-                       {% image settings.base.FooterSettings.facebook_icon original %}
-                   {% endif %}
-               </a>
-               {% endif %}
-
-               {% if settings.base.FooterSettings.instagram_url %}
-               <a href="{{ settings.base.FooterSettings.instagram_url }}" target="_blank">
-                   {% if settings.base.FooterSettings.instagram_icon %}
-                       {% image settings.base.FooterSettings.instagram_icon original %}
-                   {% endif %}
-               </a>
-               {% endif %}
-
-               {% if settings.base.FooterSettings.linkedin_url %}
-               <a href="{{ settings.base.FooterSettings.linkedin_url }}" target="_blank">
-                   {% if settings.base.FooterSettings.linkedin_icon %}
-                       {% image settings.base.FooterSettings.linkedin_icon original %}
-                   {% endif %}
-               </a>
-               {% endif %}
-
-               {% if settings.base.FooterSettings.whatsapp_url %}
-               <a href="{{ settings.base.FooterSettings.whatsapp_url }}" target="_blank">
-                   {% if settings.base.FooterSettings.whatsapp_icon %}
-                       {% image settings.base.FooterSettings.whatsapp_icon original %}
-                   {% endif %}
-               </a>
-               {% endif %}
-
+                {% for social in settings.base.FooterSettings.socials.all %}
+                    <a href="{{ social.url }}" target="_blank">
+                        {% image social.image original %}
+                    </a>
+                {% endfor %}
             </div>
           </div>
 
@@ -71,15 +44,15 @@
         <div class="row align-items-center">
 
             <!-- Copyright -->
-            <div class="col-12 col-md-4 order-3 order-md-1 text-center text-md-start mt-4 mt-md-0">
+            <div class="col-12 col-lg-4 order-3 order-lg-1 text-center text-lg-start mt-4 mt-lg-0">
                 <p class="mb-0">Copyright © 2025. All rights reserved by Neonumy</p>
             </div>
 
             <!-- Links + Imagem -->
-            <div class="col-12 col-md-8 order-1 order-md-2">
+            <div class="col-12 col-lg-8 order-1 order-lg-2">
 
                 <!-- Desktop -->
-                <div class="d-none d-md-flex justify-content-between align-items-center">
+                <div class="d-none d-lg-flex justify-content-between align-items-center">
                     <a class="nav-link footer-links {% if request.path == '/home/' %}active{% endif %}" href="/">HOME</a>
                     <a class="nav-link footer-links {% if request.path == '/privacy_policy/' %}active{% endif %}" href="/privacy-policy/">PRIVACY POLICY</a>
 
@@ -89,8 +62,8 @@
                 </div>
 
                 <!-- Mobile -->
-                <div class="d-md-none">
-                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mb-4">
+                <div class="d-lg-none">
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mb-4">
                         <a class="nav-link footer-links {% if request.path == '/home/' %}active{% endif %}" href="/">HOME</a>
                         <a class="nav-link footer-links {% if request.path == '/privacy_policy/' %}active{% endif %}" href="/privacy-policy/">PRIVACY POLICY</a>
                     </div>

@@ -65,10 +65,10 @@ document.querySelectorAll(".img-background").forEach((el) => {
   let tween;
 
   el.addEventListener("mouseenter", () => {
-    gsap.set(el, { "--cut": "100%" });
+    gsap.set(el, { "--cut": "40%" });
 
     tween = gsap.to(el, {
-      "--cut": "40%",
+      "--cut": "70%",
       duration: 0.6,
       ease: "power2.out"
     });
@@ -79,7 +79,7 @@ document.querySelectorAll(".img-background").forEach((el) => {
 
     tween = gsap.to(el, {
       "--cut": "40%",
-      duration: 0.2,
+      duration: 0.4,
       ease: "power2.out"
     });
   });

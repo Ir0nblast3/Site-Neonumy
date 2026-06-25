@@ -5,6 +5,7 @@ from wagtail.fields import StreamField
 from wagtail.images.blocks import ImageChooserBlock
 from modelcluster.fields import ParentalKey
 
+
 class TechnologyItem(Orderable):
     page = ParentalKey(
         'HomePage',
