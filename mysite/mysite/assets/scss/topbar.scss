@@ -7,9 +7,10 @@
 }
 
 .navbar{
-    padding-top: 18px;
-    padding-bottom: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-shadow: none;
+  transition: box-shadow .5s ease;
 }
 
 .navbar-brand{
@@ -34,4 +35,8 @@
 
 .navbar-toggler:focus {
   box-shadow: none;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }

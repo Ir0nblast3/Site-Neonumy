@@ -122,3 +122,14 @@ gsap.from(".tech-card", {
         toggleActions: "restart none none none"
     }
 });
+
+const navbar = document.getElementById("mainNavbar");
+
+if (navbar) {
+    const updateNavbar = () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 0);
+    };
+
+    updateNavbar();
+    window.addEventListener("scroll", updateNavbar);
+}

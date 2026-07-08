@@ -25,3 +25,10 @@
     font-size: 22px;
     line-height: 1.2;
 }
+
+@media (max-width: 767.98px) {
+  .mycontainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
